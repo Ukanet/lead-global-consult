@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* ─── Brand Tokens ─────────────────────────────────────────────── */
+:root {
+  --navy:    #0D2346;
+  --gold:    #C5A059;
+  --flame:   #E65F2B;
+  --cream:   #F9F9FB;
+  --ice:     #EEF2F6;
+  --charcoal:#2B303A;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'Space Mono', 'JetBrains Mono', monospace;
+}
+
+@theme inline {
+  /* Colors */
+  --color-navy:    var(--navy);
+  --color-gold:    var(--gold);
+  --color-flame:   var(--flame);
+  --color-cream:   var(--cream);
+  --color-ice:     var(--ice);
+  --color-charcoal:var(--charcoal);
+
+  /* Navy tints */
+  --color-navy-10:  color-mix(in srgb, var(--navy) 10%, transparent);
+  --color-navy-20:  color-mix(in srgb, var(--navy) 20%, transparent);
+  --color-navy-80:  color-mix(in srgb, var(--navy) 80%, white);
+
+  /* Fonts */
+  --font-display: var(--font-display);
+  --font-body:    var(--font-body);
+  --font-mono:    var(--font-mono);
+
+  /* Animations */
+  --animate-fade-in:    fade-in 0.6s ease forwards;
+  --animate-slide-up:   slide-up 0.6s ease forwards;
+  --animate-stagger-in: stagger-in 0.5s ease forwards;
+}
+
+/* ─── Keyframes ────────────────────────────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes stagger-in {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* ─── Focus Styles ─────────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ─── Utility Classes ──────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); }
+.font-mono-util { font-family: var(--font-mono); }
+
+.section-cream { background-color: var(--cream); }
+.section-ice   { background-color: var(--ice); }
+.section-navy  { background-color: var(--navy); }
+
+/* Hero grain texture */
+.hero-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Acrostic letter glow */
+.acrostic-letter {
+  text-shadow: 0 0 20px rgba(197, 160, 89, 0);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+.acrostic-row:hover .acrostic-letter,
+.acrostic-row:focus-within .acrostic-letter {
+  text-shadow: 0 0 30px rgba(197, 160, 89, 0.6);
+  transform: scale(1.05);
+}
+
+/* Carousel no-scrollbar */
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track { -ms-overflow-style: none; scrollbar-width: none; }
