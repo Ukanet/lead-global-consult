@@ -20,6 +20,10 @@
 # production
 /build
 
+# raw camera files
+*.CR2
+*.cr2
+
 # misc
 .DS_Store
 *.pem
