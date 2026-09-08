@@ -6,28 +6,39 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const galleryImages = [
   {
+    src: "/images/navigate_teen_coaching.jpg",
+    title: "NAVIGATE: Teen Coaching & Life Skills",
+    category: "NAVIGATE",
+    badge: "Holiday Teen Coaching",
+    description: "Facilitated during the holiday, helping young people gain clarity, direction, confidence, and the vital skills they need to navigate life successfully.",
+  },
+  {
     src: "/images/IMG_2662.JPG",
-    title: "Teacher Training & Professional Development",
-    category: "TEACH4IMPACT",
-    description: "Interactive capacity-building workshops equipping educators with modern pedagogical techniques.",
+    title: "Teacher Training & Capacity Building",
+    category: "TEACHER TRAINING",
+    badge: "Educator Development",
+    description: "Interactive capacity-building workshops equipping classroom teachers with modern pedagogical techniques and practical delivery strategies.",
   },
   {
     src: "/images/IMG_2674.JPG",
-    title: "School Leadership & Strategic Management",
-    category: "LEAD4TRANSFORMATION",
-    description: "Executive strategy sessions for school principals and institutional administrators.",
+    title: "Leadership Development & School Engagement",
+    category: "LEADERSHIP",
+    badge: "Institutional Growth",
+    description: "Hands-on leadership activities establishing vibrant school structures, administrator development, and whole-school collaboration.",
   },
   {
     src: "/images/IMG_2679.JPG",
-    title: "Academic Excellence & Student Mentoring",
-    category: "STUDY4SUCCESS",
-    description: "Engaging learners with active recall study methods and exam preparation frameworks.",
+    title: "Academic Excellence & Students' Training",
+    category: "ACADEMIC EXCELLENCE",
+    badge: "Student Success",
+    description: "Empowering learners with active study skills, exam preparation discipline, and personal growth mindsets to achieve academic excellence.",
   },
   {
     src: "/images/IMG_2688.JPG",
-    title: "Institutional Capacity Building Conference",
-    category: "CONSULTING",
-    description: "Holistic organizational transformation retreat for educational leaders across Abuja.",
+    title: "School Engagements & Coaching Programs",
+    category: "SCHOOL ENGAGEMENTS",
+    badge: "Institutional Impact",
+    description: "Sustained institutional engagements motivating teachers, improving administrative procedures, and driving physical and cultural transformation.",
   },
 ];
 
@@ -39,25 +50,23 @@ export default function GalleryStrip() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fade" className="text-center mb-16">
           <span
-            className="uppercase tracking-[0.3em] font-semibold text-[#C5A059] text-xs mb-3 block"
-            style={{ fontFamily: "var(--font-mono)" }}
+            className="uppercase tracking-[0.3em] font-semibold text-[#C5A059] text-xs mb-3 block font-mono"
           >
-            Gallery &amp; Media
+            Practical Impact &amp; Engagements
           </span>
           <h2
             id="gallery-heading"
-            className="text-3xl md:text-5xl font-bold text-[#0D2346]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-3xl md:text-5xl font-bold text-[#0D2346] font-display"
           >
             LEAD GLOBAL in Action
           </h2>
-          <p className="text-[#2B303A]/70 text-base md:text-lg mt-4 max-w-2xl mx-auto">
-            Moments from our live workshops, leadership retreats, and institutional consulting sessions across Nigeria.
+          <p className="text-[#2B303A]/75 text-base md:text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
+            Showcasing the practical impact of our work through students&apos; training sessions, leadership development activities, academic excellence programs, school engagements, teacher training sessions, and coaching programs — including photos from <strong>NAVIGATE</strong>, our holiday teen coaching initiative.
           </p>
         </AnimatedSection>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((item, index) => (
             <AnimatedSection
               key={index}

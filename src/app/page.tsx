@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import HowWeWork from "@/components/HowWeWork";
@@ -27,14 +26,12 @@ function AboutSnippet() {
                 Bridging Academics &amp; Leadership Development
               </h2>
               <p className="text-[#2B303A]/75 text-base leading-relaxed mb-4">
-                LEAD GLOBAL CONSULTS is a professional consulting, training, and capacity-development
-                organisation dedicated to empowering schools, educational institutions, businesses,
-                nonprofit organisations, and leaders to achieve excellence and sustainable growth.
+                The vision behind <strong className="text-[#0D2346]">LEAD Global Consults</strong> began in 2013, organizing leadership development and academic excellence training for students at Special Science Senior Secondary School, Makurdi.
               </p>
-              <p className="text-[#2B303A]/60 text-base leading-relaxed mb-8">
-                We operate under the{" "}
+              <p className="text-[#2B303A]/65 text-base leading-relaxed mb-8">
+                For 13 years, this vision operated through high-impact student mentoring, teacher coaching, and capacity building. In 2026, it was formally established as LEAD Global Consults under the{" "}
                 <strong className="text-[#0D2346]">Center for Excellence in Leadership and Learning (CELL)</strong>{" "}
-                — delivering innovative solutions that bridge the gap between academics and leadership.
+                — turning training into sustainable institutional transformation.
               </p>
               <Link href="/about"
                 className="inline-flex items-center gap-2 text-[#C5A059] font-semibold text-sm hover:gap-3 transition-all duration-200 group"

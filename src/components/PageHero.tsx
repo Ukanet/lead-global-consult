@@ -1,5 +1,4 @@
 import Link from "next/link";
-import AnimatedSection from "./AnimatedSection";
 
 interface Breadcrumb {
   label: string;

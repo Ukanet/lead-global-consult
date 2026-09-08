@@ -4,10 +4,10 @@ import { useCounter } from "@/hooks/useCounter";
 import AnimatedSection from "./AnimatedSection";
 
 const stats = [
-  { value: 200, suffix: "+", label: "Educators Trained", description: "Teachers and school leaders upskilled" },
-  { value: 10,  suffix: "+", label: "Schools & Orgs Served", description: "Institutions transformed across Abuja" },
-  { value: 3,   suffix: "",  label: "Specialized Programs", description: "TEACH4IMPACT · STUDY4SUCCESS · LEAD4TRANSFORMATION" },
-  { value: 100, suffix: "%", label: "Client Satisfaction", description: "Based on post-program feedback" },
+  { value: 500, suffix: "+", label: "Students Trained", description: "Leadership development & academic excellence" },
+  { value: 100, suffix: "+", label: "Teachers Reached", description: "Capacity-building, coaching & training" },
+  { value: 5,   suffix: "+", label: "Schools & Institutions", description: "Served, with more partnerships in development" },
+  { value: 13,  suffix: " yrs",  label: "Experience & Impact", description: "Dedicated educational transformation since 2013" },
 ];
 
 function StatItem({ value, suffix, label, description, delay }: (typeof stats)[0] & { delay: number }) {

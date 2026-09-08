@@ -21,9 +21,33 @@ const iconsMap: Record<string, React.ReactNode> = {
 };
 
 const partners = [
-  "Cyrus International School, Kuje",
-  "Genesis Christian Academy, Kuje",
-  "Royal Heritage Academy, Abuja",
+  "Genesis Christian Academy, Bamishi, Kuje, Abuja",
+  "Cyrus International School, Kuje, Abuja",
+  "Salem Academy, Lugbe, Abuja",
+  "ISGACH Unity International School, Kuje, Abuja",
+];
+
+const beliefs = [
+  {
+    title: "Youth Leadership Potential",
+    text: "Every young person has the potential to lead and excel when given the right guidance, mindset frameworks, and encouraging environment.",
+  },
+  {
+    title: "Teachers as Change Drivers",
+    text: "Teachers are critical drivers of sustainable change in schools and must continually be equipped, supported, and motivated.",
+  },
+  {
+    title: "Holistic School Transformation",
+    text: "School improvement requires more than academic intervention; it involves leadership, administration, culture, visibility, and people development.",
+  },
+  {
+    title: "Continuous Engagement",
+    text: "Sustainable transformation happens when training is followed by practical application, monitoring, coaching, and continuous engagement.",
+  },
+  {
+    title: "Developing People to Build Institutions",
+    text: "Strong institutions are built by developing the people who make those institutions work.",
+  },
 ];
 
 export default function BlogInsights() {
@@ -42,21 +66,79 @@ export default function BlogInsights() {
             style={{ fontFamily: "var(--font-mono)" }}
             aria-hidden="true"
           >
-            Knowledge &amp; Resources
+            Insights &amp; Perspectives
           </p>
           <h2
             id="insights-heading"
-            className="font-display text-[#0D2346] text-3xl sm:text-4xl md:text-5xl font-bold max-w-2xl"
+            className="font-display text-[#0D2346] text-3xl sm:text-4xl md:text-5xl font-bold max-w-3xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Insights &amp; Perspectives
+            From Training to Transformation
           </h2>
-          <p className="text-[#2B303A]/65 mt-4 text-lg max-w-xl">
-            Practical thinking on education, leadership, and organizational excellence. Click any publication to read the full article.
+          <p className="text-[#2B303A]/75 mt-4 text-lg max-w-2xl leading-relaxed">
+            At LEAD Global Consults, we believe that meaningful transformation goes beyond delivering a training session.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mb-20">
+        {/* Foundational Philosophy Manifesto Card */}
+        <AnimatedSection animation="slide-up" className="mb-20">
+          <div className="bg-[#0D2346] text-white p-8 md:p-12 rounded-sm border-t-4 border-[#C5A059] shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative z-10 max-w-4xl">
+              <span className="text-[#C5A059] text-xs uppercase font-mono tracking-widest block mb-3 font-semibold">
+                Our Guiding Philosophy
+              </span>
+              <blockquote className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-white mb-6 leading-tight">
+                &ldquo;Knowledge creates potential; <span className="text-[#C5A059]">application creates transformation.&rdquo;</span>
+              </blockquote>
+              <p className="text-[#F9F9FB]/80 text-base md:text-lg leading-relaxed mb-8 max-w-3xl">
+                Our experiences working with students, teachers, and schools have reinforced the critical importance of continuous engagement, practical leadership development, accountability, and institutional support.
+              </p>
+
+              <div className="pt-6 border-t border-white/10 mb-8">
+                <p className="text-[#C5A059] font-mono text-xs uppercase tracking-widest mb-6 font-semibold">
+                  What We Believe
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {beliefs.map((b, idx) => (
+                    <div key={idx} className="bg-white/5 p-5 rounded-sm border border-white/10 hover:border-[#C5A059]/40 transition-colors">
+                      <div className="flex items-center gap-2.5 mb-2">
+                        <span className="w-5 h-5 rounded-full bg-[#C5A059] text-[#0D2346] text-xs font-bold font-mono flex items-center justify-center flex-shrink-0">
+                          {idx + 1}
+                        </span>
+                        <h4 className="text-white font-bold text-sm font-display">{b.title}</h4>
+                      </div>
+                      <p className="text-[#F9F9FB]/70 text-xs leading-relaxed">{b.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-4 bg-[#C5A059]/15 border-l-2 border-[#C5A059] rounded-xs text-[#F9F9FB]">
+                <p className="text-sm md:text-base leading-relaxed">
+                  <strong>Our Goal:</strong> To continue turning <strong>training into transformation</strong> — equipping individuals and strengthening institutions to achieve lasting excellence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Section Header for Articles */}
+        <AnimatedSection animation="slide-up" className="mb-10">
+          <p
+            className="text-[#C5A059] text-xs tracking-[0.3em] uppercase mb-2 font-medium"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            Articles &amp; Research
+          </p>
+          <h3 className="font-display text-[#0D2346] text-2xl md:text-3xl font-bold">
+            Featured Publications &amp; Guides
+          </h3>
+        </AnimatedSection>
+
+        {/* Publications Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {INSIGHTS_DATA.map((post, i) => (
             <AnimatedSection key={post.slug} animation="slide-up" delay={i * 90}>
               <Link href={`/insights/${post.slug}`} className="block h-full group">
@@ -87,13 +169,13 @@ export default function BlogInsights() {
                     </div>
 
                     <h3
-                      className="font-display text-[#0D2346] font-bold text-lg leading-snug mb-3 group-hover:text-[#C5A059] transition-colors duration-200"
+                      className="font-display text-[#0D2346] font-bold text-xl leading-snug mb-3 group-hover:text-[#C5A059] transition-colors duration-200"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       {post.title}
                     </h3>
 
-                    <p className="text-[#2B303A]/65 text-sm leading-relaxed flex-1 mb-5">
+                    <p className="text-[#2B303A]/65 text-sm leading-relaxed flex-1 mb-6">
                       {post.excerpt}
                     </p>
 
@@ -125,22 +207,25 @@ export default function BlogInsights() {
         <AnimatedSection animation="fade">
           <div className="border-t border-[#EEF2F6] pt-14">
             <p
-              className="text-center text-[#2B303A]/40 text-xs tracking-[0.3em] uppercase mb-8"
+              className="text-center text-[#2B303A]/50 text-xs tracking-[0.3em] uppercase mb-8 font-semibold"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              Schools &amp; Institutions We Have Worked With
+              Our Partner Schools &amp; Institutions
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {partners.map((name) => (
                 <div
                   key={name}
-                  className="px-5 py-3 border border-[#EEF2F6] text-[#0D2346]/50 text-sm font-medium hover:border-[#C5A059]/40 hover:text-[#0D2346] transition-all duration-200"
+                  className="px-5 py-4 bg-white border border-[#EEF2F6] text-[#0D2346] text-xs font-semibold text-center hover:border-[#C5A059] transition-all duration-200 shadow-xs"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {name}
                 </div>
               ))}
             </div>
+            <p className="text-center text-[#2B303A]/50 text-xs mt-6 font-mono">
+              More schools and institutions will be added as our partnerships continue to grow.
+            </p>
           </div>
         </AnimatedSection>
       </div>

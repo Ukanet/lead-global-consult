@@ -47,7 +47,13 @@ function Teach4ImpactCarousel() {
   const onTouchEnd = () => {
     if (touchStartX.current === null || touchEndX.current === null) return;
     const distance = touchStartX.current - touchEndX.current;
-    if (Math.abs(distance) >= 40) distance > 0 ? next() : prev();
+    if (Math.abs(distance) >= 40) {
+      if (distance > 0) {
+        next();
+      } else {
+        prev();
+      }
+    }
   };
 
   const t = teach4impactTestimonials[current];

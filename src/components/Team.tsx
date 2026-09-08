@@ -35,23 +35,47 @@ export default function Team() {
       aria-labelledby="team-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Our Current Stage Banner */}
+        <AnimatedSection animation="slide-up" className="mb-16">
+          <div className="bg-[#0D2346] text-white p-8 md:p-12 rounded-sm border-l-4 border-[#C5A059] relative overflow-hidden shadow-xl">
+            <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 w-64 h-64 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative z-10 max-w-3xl">
+              <span
+                className="inline-flex items-center gap-2 px-3 py-1 bg-[#C5A059]/20 text-[#C5A059] border border-[#C5A059]/40 text-[11px] font-mono uppercase tracking-widest rounded-full mb-4"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] animate-ping" />
+                Our Current Stage
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
+                Development &amp; Growth Phase
+              </h3>
+              <p className="text-[#F9F9FB]/85 text-base md:text-lg leading-relaxed mb-6">
+                LEAD Global Consults is currently in a <strong>development and growth phase</strong>. We are building the structures, partnerships, and systems necessary to scale our impact sustainably.
+              </p>
+              <p className="text-[#F9F9FB]/70 text-sm md:text-base leading-relaxed">
+                As the organization grows, we will also be expanding our team with passionate professionals who share our commitment to developing people, strengthening institutions, and creating lasting positive change.
+              </p>
+            </div>
+          </div>
+        </AnimatedSection>
+
         <AnimatedSection animation="slide-up" className="mb-14">
           <p
-            className="text-[#C5A059] text-xs tracking-[0.3em] uppercase mb-4"
+            className="text-[#C5A059] text-xs tracking-[0.3em] uppercase mb-4 font-medium"
             style={{ fontFamily: "var(--font-mono)" }}
             aria-hidden="true"
           >
-            The People Behind CELL
+            Organizational Capacities
           </p>
           <h2
             id="team-heading"
             className="font-display text-[#0D2346] text-3xl sm:text-4xl md:text-5xl font-bold max-w-2xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Our Team
+            Leadership &amp; Practice Areas
           </h2>
           <p className="text-[#2B303A]/65 mt-4 text-lg max-w-xl">
-            Experienced educators, coaches, and consultants committed to driving real, measurable change.
+            Experienced educators, coaches, and consultants driving measurable institutional outcomes.
           </p>
         </AnimatedSection>
 
@@ -72,8 +96,6 @@ export default function Team() {
                       {member.initials}
                     </span>
                   </div>
-                  {/* Placeholder photo overlay hint */}
-                  <div className="absolute inset-0 rounded-full bg-[#C5A059]/0 group-hover:bg-[#C5A059]/5 transition-colors duration-300" />
                 </div>
 
                 <p
@@ -98,12 +120,16 @@ export default function Team() {
           ))}
         </div>
 
-        <AnimatedSection animation="fade" delay={300} className="mt-10 text-center">
-          <p className="text-[#2B303A]/50 text-sm italic">
-            Team profiles and photos coming soon — we are growing! In the meantime,{" "}
-            <a href="/contact" className="text-[#C5A059] hover:underline">get in touch</a>{" "}
-            to speak with a consultant directly.
-          </p>
+        <AnimatedSection animation="fade" delay={300} className="mt-12 text-center">
+          <div className="inline-block p-6 bg-white border border-[#EEF2F6] rounded-sm max-w-2xl mx-auto shadow-sm">
+            <h4 className="text-[#0D2346] font-display font-bold text-base mb-2">Interested in Joining Our Mission?</h4>
+            <p className="text-[#2B303A]/70 text-sm leading-relaxed mb-4">
+              We are actively laying the groundwork to welcome facilitators, educational coaches, and institutional consultants as our network of partner schools continues to expand.
+            </p>
+            <a href="/contact" className="inline-flex items-center gap-2 text-[#C5A059] font-semibold text-sm hover:underline font-mono">
+              Connect With Us &rarr;
+            </a>
+          </div>
         </AnimatedSection>
       </div>
     </section>

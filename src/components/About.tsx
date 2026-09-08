@@ -18,11 +18,17 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <AnimatedSection animation="slide-left" delay={100}>
             <div>
-              <p className="text-[#2B303A] text-lg leading-relaxed mb-6">
-                LEAD GLOBAL CONSULTS is a professional consulting, training, and capacity-development organization dedicated to empowering schools, educational institutions, businesses, nonprofit organizations, and leaders to achieve excellence and sustainable growth.
+              <p className="text-[#2B303A] text-lg leading-relaxed mb-5 font-medium">
+                The vision behind <strong className="text-[#0D2346]">LEAD Global Consults</strong> began in 2013, organizing leadership development and academic excellence training for students at Special Science Senior Secondary School, Makurdi.
               </p>
-              <p className="text-[#2B303A] text-lg leading-relaxed mb-8">
-                We provide innovative solutions in teacher training, academic excellence coaching, leadership development, organizational transformation, and institutional capacity building. We bridge the gap between academics and leadership development.
+              <p className="text-[#2B303A]/80 text-base leading-relaxed mb-4">
+                Since then, <strong>over 500 students</strong> have participated in leadership development, academic excellence, and personal growth training across various schools and institutions.
+              </p>
+              <p className="text-[#2B303A]/80 text-base leading-relaxed mb-4">
+                Our work with teachers began more formally in 2022 at Genesis Christian Academy, Kuje, and has since reached <strong>100+ teachers</strong> through training, coaching, and capacity-building initiatives across <strong>5+ schools and institutions</strong>, with more partnerships in active development.
+              </p>
+              <p className="text-[#2B303A]/85 text-base leading-relaxed mb-8 bg-white p-4 border-l-2 border-[#C5A059] shadow-sm">
+                For 13 years, this vision operated informally through high-impact training, mentoring, coaching, and capacity-building. <strong>In 2026, the vision was formally established as LEAD Global Consults</strong>, creating a platform through which we can expand our impact and serve more schools, students, teachers, and institutions.
               </p>
 
               {/* Featured Image Frame */}

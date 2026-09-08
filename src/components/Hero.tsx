@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import HeroImageSlider from "./HeroImageSlider";
 
 const programs = [
@@ -187,18 +186,15 @@ export default function Hero() {
                 <div className="flex items-center gap-4 p-5"
                   style={{ border: "1px solid rgba(197,160,89,0.2)", background: "rgba(249,249,251,0.03)" }}>
                   <div className="flex -space-x-2">
-                    {["CI", "GC"].map((init) => (
+                    {["GC", "CI", "SA", "IS"].map((init) => (
                       <div key={init} className="w-9 h-9 rounded-full bg-[#C5A059]/20 border-2 border-[#0D2346] flex items-center justify-center">
                         <span className="text-[#C5A059] text-[9px] font-bold" style={{ fontFamily: "var(--font-mono)" }}>{init}</span>
                       </div>
                     ))}
-                    <div className="w-9 h-9 rounded-full bg-[#C5A059]/10 border-2 border-[#0D2346] flex items-center justify-center">
-                      <span className="text-[#C5A059]/70 text-[9px] font-bold" style={{ fontFamily: "var(--font-mono)" }}>+8</span>
-                    </div>
                   </div>
                   <div>
-                    <p className="text-[#F9F9FB]/75 text-sm font-medium">Trusted by 10+ institutions</p>
-                    <p className="text-[#F9F9FB]/35 text-xs mt-0.5">Across Abuja and Nigeria</p>
+                    <p className="text-[#F9F9FB]/75 text-sm font-medium">5+ Partner Schools &amp; Institutions</p>
+                    <p className="text-[#F9F9FB]/35 text-xs mt-0.5">500+ students &middot; 100+ teachers &middot; 13 yrs impact</p>
                   </div>
                 </div>
               </div>

@@ -2,29 +2,29 @@ import AnimatedSection from '@/components/AnimatedSection';
 
 const milestones = [
   {
-    year: '2020',
-    title: 'Founded',
-    description: 'LEAD GLOBAL CONSULTS established under CELL (Center for Excellence in Leadership and Learning), Abuja.'
+    year: '2013',
+    title: 'The Vision Begins',
+    description: 'Started organizing leadership development and academic excellence training for students at Special Science Senior Secondary School, Makurdi.'
   },
   {
-    year: '2021',
-    title: 'First School Partnership',
-    description: 'Launched TEACH4IMPACT at Cyrus International School, Kuje — our first institutional partnership.'
+    year: '2018',
+    title: '500+ Students Impacted',
+    description: 'Over 500 students participated in leadership development, academic excellence, and personal growth training across various schools.'
   },
   {
     year: '2022',
-    title: 'STUDY4SUCCESS Launch',
-    description: 'Introduced academic excellence coaching for students preparing for high-stakes examinations across Abuja.'
-  },
-  {
-    year: '2023',
-    title: 'LEAD4TRANSFORMATION',
-    description: 'Expanded into institutional leadership development, serving school administrators and organisational leaders.'
+    title: 'Teacher Capacity Building Launch',
+    description: 'Formal teacher training and development began at Genesis Christian Academy, Kuje, focusing on pedagogical effectiveness and classroom coaching.'
   },
   {
     year: '2024',
-    title: 'Growing Impact',
-    description: '200+ educators trained, 10+ institutions served, and programs delivered across Abuja and neighbouring states.'
+    title: 'Expanding Institutional Footprint',
+    description: 'Reached 100+ teachers and served 5+ partner schools and institutions across Abuja with leadership, coaching, and capacity-building programs.'
+  },
+  {
+    year: '2026',
+    title: 'Formally Established as LEAD Global Consults',
+    description: 'After 13 years of informal training, mentoring, and coaching, formally established to scale impact sustainably and empower more schools, students, teachers, and institutions.'
   }
 ];
 

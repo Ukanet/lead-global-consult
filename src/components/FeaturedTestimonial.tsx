@@ -17,7 +17,7 @@ export default function FeaturedTestimonial() {
 
         <AnimatedSection animation="slide-up" delay={150}>
           <blockquote className="text-xl md:text-3xl font-medium text-white leading-relaxed mb-10 font-[family-name:var(--font-display)] px-4">
-            LEAD GLOBAL CONSULTS completely transformed how our teachers approach their classrooms. The TEACH4IMPACT program gave our staff practical, immediately applicable tools — and the results showed in our students' performance within weeks.
+            LEAD GLOBAL CONSULTS completely transformed how our teachers approach their classrooms. The TEACH4IMPACT program gave our staff practical, immediately applicable tools — and the results showed in our students&apos; performance within weeks.
           </blockquote>
         </AnimatedSection>
 
@@ -30,11 +30,13 @@ export default function FeaturedTestimonial() {
           </div>
           
           <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-medium text-[var(--gold)] uppercase tracking-wider font-[family-name:var(--font-mono)]">
-            <span>200+ Educators</span>
+            <span>500+ Students</span>
             <span className="hidden sm:inline">&middot;</span>
-            <span>10+ Schools</span>
+            <span>100+ Teachers</span>
             <span className="hidden sm:inline">&middot;</span>
-            <span>100% Client Satisfaction</span>
+            <span>5+ Partner Schools</span>
+            <span className="hidden sm:inline">&middot;</span>
+            <span>13 Years Impact</span>
           </div>
 
           <div className="mt-12">

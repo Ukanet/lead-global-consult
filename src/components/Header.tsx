@@ -36,7 +36,11 @@ export default function Header() {
   }, [mobileOpen]);
 
   // Close mobile menu on route change
-  useEffect(() => { setMobileOpen(false); }, [pathname]);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+  }
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
